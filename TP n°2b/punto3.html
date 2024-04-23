@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var antiguedad = parseInt(prompt("ingrese su antiguedad"))
+        var sueldo = parseFloat(prompt("ingrese su sueldo"))
+        var porcentajeanti = 0
+        var porcentajesueldo = 0
+        if (antiguedad > 2 && antiguedad < 5) {
+
+            porcentajeanti = sueldo * 0.20
+            alert("el monto del sueldo que se le entrega con el bono de la antiguedad es del: " + porcentajeanti + " $")
+            if (antiguedad >= 5) {
+                porcentajeanti = sueldo * 0.30
+                alert("el monto del sueldo que se le entrega en el bono de la antiguedad es del: " + porcentajeanti + " $")
+
+
+            }
+        }
+
+        if (sueldo < 1000) {
+            porcentajesueldo = sueldo * 0.25
+            alert("el monto del sueldo que se le entrega en el bono del sueldo es de : " + porcentajesueldo + " $")
+            if (sueldo > 1000 && sueldo <= 3500) {
+                porcentajesueldo = sueldo * 0.15
+                alert("el monto del sueldo que se le entrega en el bono del sueldo es de : " + porcentajesueldo + " $")
+            } else if (sueldo > 3500) {
+                porcentajesueldo = sueldo * 0.10
+                alert("el monto del sueldo que se le entrega en el bono del sueldo es de : " + porcentajesueldo + " $")
+            }
+        }
+
+        if (porcentajeanti > porcentajesueldo) {
+
+
+            alert("el bono mayor es el de la antiguedad y es de: " + porcentajeanti + " $")
+
+        }
+        else {
+
+            alert("el bono mayor es el del sueldo: " + porcentajesueldo + " $")
+        }
+
+    </script>
+</body>
+</html>
